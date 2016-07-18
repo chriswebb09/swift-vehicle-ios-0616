@@ -23,12 +23,7 @@ class Car: Vehicle {
     convenience init (name: String, weight: Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double) {
         self.init(name:name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
     }
-    
-//    convenience init(name:String , weight:Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double) {
-//        self.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
-//    }
-    
-    
+        
     func drive() {
         self.accelerate()
     }
