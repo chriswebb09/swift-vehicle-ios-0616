@@ -57,20 +57,20 @@ class Vehicle {
     
     func turnRight() {
         if self.heading >= 0 {
-            self.heading += 80
-        } else if self.heading >= 280 {
-            let newIncrement = (self.heading + 80) - 360
+            self.heading += 90
+        } else if self.heading >= 270 {
+            let newIncrement = (self.heading + 90) - 360
             self.heading = 0 + newIncrement
         }
         
     }
     
     func turnLeft() {
-        if self.heading < 80 {
-            let newIncrement = 80 - self.heading
+        if self.heading < 90 {
+            let newIncrement = 90 - self.heading
             self.heading = 360 - newIncrement
         } else {
-            self.heading -= 80
+            self.heading -= 90
         }
         
     }
