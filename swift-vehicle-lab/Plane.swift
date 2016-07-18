@@ -26,11 +26,13 @@ class Plane: Vehicle {
     }
     
     func land() {
-        
+        self.altitude = 0.0
+        self.speed = 0.0
     }
     
     func climb() {
-        
+        let altitudeIncrement = self.altitude * 0.1
+        self.altitude += altitudeIncrement
     }
     
     func dive() {
