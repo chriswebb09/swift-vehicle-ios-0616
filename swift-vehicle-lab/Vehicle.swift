@@ -35,7 +35,6 @@ class Vehicle {
     
     func goFast() {
         self.speed = self.maxSpeed
-        
     }
     
     func halt() {
@@ -67,6 +66,12 @@ class Vehicle {
     }
     
     func turnLeft() {
+        if self.heading < 80 {
+            let newIncrement = 80 - self.heading
+            self.heading = 360 - newIncrement
+        } else {
+            self.heading -= 80
+        }
         
     }
 }
