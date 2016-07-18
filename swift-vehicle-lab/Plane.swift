@@ -15,6 +15,12 @@ class Plane: Vehicle {
         return false
     }
     
+    init(name: String, weight: Double, maxSpeed: Double, speed: Double, heading: Double, maxAltitude: Double, altitude: Double) {
+        self.maxAltitude = maxAltitude
+        self.altitude = altitude
+        super.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: speed, heading: heading)
+    }
+    
     func takeOff() {
         
     }
