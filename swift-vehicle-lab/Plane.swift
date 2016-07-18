@@ -40,6 +40,10 @@ class Plane: Vehicle {
     }
     
     func dive() {
+        let altitudeIncrement = self.maxAltitude * 0.1
+        if self.altitude > altitudeIncrement {
+            self.altitude -= altitudeIncrement
+        }
         
     }
     

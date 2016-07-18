@@ -40,7 +40,6 @@ class Vehicle {
     
     func halt() {
         self.speed = 0
-        
     }
     
     func accelerate() {
@@ -58,6 +57,12 @@ class Vehicle {
     }
     
     func turnRight() {
+        if self.heading >= 0 {
+            self.heading += 80
+        } else if self.heading >= 280 {
+            let newIncrement = (self.heading + 80) - 360
+            self.heading = 0 + newIncrement
+        }
         
     }
     
