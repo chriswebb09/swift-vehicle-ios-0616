@@ -13,10 +13,10 @@ class RaceCar: Car {
     let sponsors: [String]
     
     
-    init(name: String, weight: Double, maxSpeed: Double, speed: Double, heading: Double, transmission: String, cylinders: Int, milesPerGallon: Int, driver: String, sponsors: [String]) {
+    init(name: String, weight: Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double, driver: String, sponsors: [String]) {
         self.driver = driver
         self.sponsors = sponsors
-        super.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: speed, heading: heading, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
+        super.init(name: name, weight: weight, maxSpeed: maxSpeed, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
     }
     
     override func accelerate() {

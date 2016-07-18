@@ -23,11 +23,15 @@ class Vehicle {
         self.heading = heading
     }
     
-    convenience init(name: String, weight: Double, maxSpeed: Double) {
-        self.init(name: name, weight: weight, maxSpeed: maxSpeed)
-        self.speed = 0.0
-        self.heading = 0.0
+    convenience init (name:String , weight:Double, maxSpeed: Double) {
+        self.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0)
     }
+    
+//    convenience init(name: String, weight: Double, maxSpeed: Double) {
+//        self.init(name: name, weight: weight, maxSpeed: maxSpeed)
+//        self.speed = 0.0
+//        self.heading = 0.0
+//    }
     
     func goFast() {
         self.speed = self.maxSpeed

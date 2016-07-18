@@ -12,7 +12,10 @@ class Plane: Vehicle {
     let maxAltitude: Double
     var altitude: Double
     var inFlight: Bool {
-        return false
+        if altitude > 0 {
+            return true
+        }
+        return false 
     }
     
     init(name: String, weight: Double, maxSpeed: Double, speed: Double, heading: Double, maxAltitude: Double, altitude: Double) {
@@ -22,7 +25,8 @@ class Plane: Vehicle {
     }
     
     func takeOff() {
-        
+        self.accelerate()
+        self.climb()
     }
     
     func land() {
