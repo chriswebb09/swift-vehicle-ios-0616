@@ -13,11 +13,20 @@ class Car: Vehicle {
     let cylinders: Int
     let milesPerGallon: Int
     
-    init(transmission: String, cylinders: Int, milesPerGallon: Int) {
+    init(name: String, weight: Double, maxSpeed: Double, speed: Double, heading: Double, transmission: String, cylinders: Int, milesPerGallon: Int) {
         self.transmission = transmission
         self.cylinders = cylinders
         self.milesPerGallon = milesPerGallon
-        Vehicle.init()
+        super.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: speed, heading: heading)
     }
     
+    
+    
+    func drive() {
+        self.accelerate()
+    }
+    
+    func brake() {
+        self.decelerate()
+    }
 }

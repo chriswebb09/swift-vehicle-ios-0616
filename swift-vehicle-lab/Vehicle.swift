@@ -23,24 +23,34 @@ class Vehicle {
         self.heading = heading
     }
     
-    convenience init() {
-        
+    convenience init(name: String, weight: Double, maxSpeed: Double) {
+        self.init(name: name, weight: weight, maxSpeed: maxSpeed)
+        self.speed = 0.0
+        self.heading = 0.0
     }
     
     func goFast() {
+        self.speed = self.maxSpeed
         
     }
     
     func halt() {
+        self.speed = 0
         
     }
     
     func accelerate() {
-        
+        let speedIncrement: Double = maxSpeed * 0.1
+        if (self.speed + speedIncrement) < maxSpeed {
+            self.speed += speedIncrement
+        }
     }
     
     func decelerate() {
-        
+        let speedIncrement: Double = maxSpeed * 0.1
+        if self.speed > speedIncrement {
+            self.speed -= speedIncrement
+        }
     }
     
     func turnRight() {
