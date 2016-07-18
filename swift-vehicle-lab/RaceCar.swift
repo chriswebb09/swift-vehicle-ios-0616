@@ -9,5 +9,19 @@
 import Foundation
 
 class RaceCar: Car {
+    let driver: String
+    let sponsors: [String]
     
+    
+    init() {
+        
+    }
+    
+    func driftRight() {
+        
+    }
+    
+    func driftLeft() {
+        
+    }
 }
