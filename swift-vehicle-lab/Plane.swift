@@ -24,7 +24,11 @@ class Plane: Vehicle {
         super.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: speed, heading: heading)
     }
     
-    func takeOff() {
+    convenience init(name: String, weight: Double, maxSpeed: Double, maxAltitude: Double) {
+        self.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0, maxAltitude: maxAltitude, altitude: 0.0)
+    }
+    
+    func takeoff() {
         self.accelerate()
         self.climb()
     }

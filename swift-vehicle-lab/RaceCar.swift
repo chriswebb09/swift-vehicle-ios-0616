@@ -9,14 +9,14 @@
 import Foundation
 
 class RaceCar: Car {
-    let driver: String
-    let sponsors: [String]
+    var driver: String
+    var sponsors: [String]
     
     
     init(name: String, weight: Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double, driver: String, sponsors: [String]) {
         self.driver = driver
         self.sponsors = sponsors
-        super.init(name: name, weight: weight, maxSpeed: maxSpeed, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
+        super.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0, transmission: transmission, cylinders: cylinders, milesPerGallon: milesPerGallon)
     }
     
     override func accelerate() {

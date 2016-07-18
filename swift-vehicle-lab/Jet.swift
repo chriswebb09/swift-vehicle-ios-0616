@@ -18,8 +18,8 @@ class Jet: Plane {
         self.init(name: name, weight: weight, maxSpeed: maxSpeed, speed: 0.0, heading: 0.0, maxAltitude: maxAltitude, altitude: 0.0)
     }
     
-    func afterBurner() {
-        
+    func afterburner() {
+        self.speed = self.maxSpeed
     }
     
 }
